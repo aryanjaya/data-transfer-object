@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\DataTransferObject\Reflection;
+namespace Aryanjaya\DataTransferObject\Reflection;
 
 use JetBrains\PhpStorm\Immutable;
 use ReflectionAttribute;
@@ -9,12 +9,12 @@ use ReflectionNamedType;
 use ReflectionProperty;
 use ReflectionType;
 use ReflectionUnionType;
-use Spatie\DataTransferObject\Attributes\CastWith;
-use Spatie\DataTransferObject\Attributes\DefaultCast;
-use Spatie\DataTransferObject\Attributes\MapFrom;
-use Spatie\DataTransferObject\Caster;
-use Spatie\DataTransferObject\DataTransferObject;
-use Spatie\DataTransferObject\Validator;
+use Aryanjaya\DataTransferObject\Attributes\CastWith;
+use Aryanjaya\DataTransferObject\Attributes\DefaultCast;
+use Aryanjaya\DataTransferObject\Attributes\MapFrom;
+use Aryanjaya\DataTransferObject\Caster;
+use Aryanjaya\DataTransferObject\DataTransferObject;
+use Aryanjaya\DataTransferObject\Validator;
 
 class DataTransferObjectProperty
 {
@@ -49,7 +49,7 @@ class DataTransferObjectProperty
     }
 
     /**
-     * @return \Spatie\DataTransferObject\Validator[]
+     * @return Aryanjaya\DataTransferObject\Validator[]
      */
     public function getValidators(): array
     {
@@ -86,7 +86,7 @@ class DataTransferObjectProperty
             return $this->resolveCasterFromDefaults();
         }
 
-        /** @var \Spatie\DataTransferObject\Attributes\CastWith $attribute */
+        /** @var \Aryanjaya\DataTransferObject\Attributes\CastWith $attribute */
         $attribute = $attributes[0]->newInstance();
 
         return new $attribute->casterClass(
@@ -137,7 +137,7 @@ class DataTransferObjectProperty
         }
 
         foreach ($defaultCastAttributes as $defaultCastAttribute) {
-            /** @var \Spatie\DataTransferObject\Attributes\DefaultCast $defaultCast */
+            /** @var \Aryanjaya\DataTransferObject\Attributes\DefaultCast $defaultCast */
             $defaultCast = $defaultCastAttribute->newInstance();
 
             if ($defaultCast->accepts($this->reflectionProperty)) {

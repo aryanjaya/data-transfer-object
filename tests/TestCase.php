@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Spatie\DataTransferObject\Tests;
+namespace Aryanjaya\DataTransferObject\Tests;
 
 use PHPUnit\Framework\TestCase as BaseTestCase;
 

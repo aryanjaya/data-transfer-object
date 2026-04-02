@@ -1,9 +1,9 @@
 <?php
 
-namespace Spatie\DataTransferObject\Exceptions;
+namespace Aryanjaya\DataTransferObject\Exceptions;
 
 use Exception;
-use Spatie\DataTransferObject\DataTransferObject;
+use Aryanjaya\DataTransferObject\DataTransferObject;
 
 class ValidationException extends Exception
 {
@@ -16,7 +16,7 @@ class ValidationException extends Exception
         $messages = [];
 
         foreach ($validationErrors as $fieldName => $errorsForField) {
-            /** @var \Spatie\DataTransferObject\Validation\ValidationResult $errorForField */
+            /** @var \Aryanjaya\DataTransferObject\Validation\ValidationResult $errorForField */
             foreach ($errorsForField as $errorForField) {
                 $messages[] = "\t - `{$className}->{$fieldName}`: {$errorForField->message}";
             }

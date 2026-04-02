@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\DataTransferObject\Validation;
+namespace Aryanjaya\DataTransferObject\Validation;
 
 use JetBrains\PhpStorm\Immutable;
 

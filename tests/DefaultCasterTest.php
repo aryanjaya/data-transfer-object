@@ -1,12 +1,12 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests;
+namespace Aryanjaya\DataTransferObject\Tests;
 
 use Attribute;
 use DateTimeImmutable;
-use Spatie\DataTransferObject\Attributes\DefaultCast;
-use Spatie\DataTransferObject\Caster;
-use Spatie\DataTransferObject\DataTransferObject;
+use Aryanjaya\DataTransferObject\Attributes\DefaultCast;
+use Aryanjaya\DataTransferObject\Caster;
+use Aryanjaya\DataTransferObject\DataTransferObject;
 
 class DefaultCasterTest extends TestCase
 {

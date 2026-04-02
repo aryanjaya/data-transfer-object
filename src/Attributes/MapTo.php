@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\DataTransferObject\Attributes;
+namespace Aryanjaya\DataTransferObject\Attributes;
 
 use Attribute;
 

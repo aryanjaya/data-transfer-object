@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests\Stubs;
+namespace Aryanjaya\DataTransferObject\Tests\Stubs;
 
 enum StringEnum: string
 {

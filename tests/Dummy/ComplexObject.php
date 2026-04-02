@@ -1,6 +1,6 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests\Dummy;
+namespace Aryanjaya\DataTransferObject\Tests\Dummy;
 
 class ComplexObject
 {

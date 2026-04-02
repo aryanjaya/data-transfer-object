@@ -1,41 +1,68 @@
-> **Warning**
-> We [have decided](https://stitcher.io/blog/deprecating-spatie-dto) to stop maintaining this package.
-> 
-> Consider migrating to [spatie/laravel-data](https://spatie.be/docs/laravel-data) or [cuyz/valinor](https://github.com/cuyz/valinor).
->
-> Feel free to fork our code and adapt it to your needs.
-
 # Data transfer objects with batteries included
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/spatie/data-transfer-object.svg?style=flat-square)](https://packagist.org/packages/spatie/data-transfer-object)
-![Test](https://github.com/spatie/data-transfer-object/workflows/Test/badge.svg)
-[![Total Downloads](https://img.shields.io/packagist/dt/spatie/data-transfer-object.svg?style=flat-square)](https://packagist.org/packages/spatie/data-transfer-object)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/aryanjaya/data-transfer-object.svg?style=flat-square)](https://packagist.org/packages/aryanjaya/data-transfer-object)
+![Test](https://github.com/aryanjaya/data-transfer-object/workflows/Test/badge.svg)
+[![Total Downloads](https://img.shields.io/packagist/dt/aryanjaya/data-transfer-object.svg?style=flat-square)](https://packagist.org/packages/aryanjaya/data-transfer-object)
+
+> **Note**
+> This package is a fork of the original [spatie/data-transfer-object](https://github.com/spatie/data-transfer-object) package.
+> The Spatie team has decided to [stop maintaining](https://stitcher.io/blog/deprecating-spatie-dto) the original package.
+> This fork exists to continue maintaining the package for those who still rely on it.
+> All credit for the original work goes to [Spatie](https://spatie.be) and [Brent Roose](https://github.com/brendt).
 
 ## Installation
 
 You can install the package via composer:
 
 ```bash
-composer require spatie/data-transfer-object
+composer require aryanjaya/data-transfer-object
 ```
 
-* **Note**: v3 of this package only supports `php:^8.0`. If you're looking for the older version, check out [v2](https://github.com/spatie/data-transfer-object/tree/v2).
+## Migrating from `spatie/data-transfer-object`
 
-## Support us
+If you're currently using the original `spatie/data-transfer-object` package, migration is straightforward:
 
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/data-transfer-object.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/data-transfer-object)
+### 1. Update composer dependency
 
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
+```bash
+composer remove spatie/data-transfer-object
+composer require aryanjaya/data-transfer-object
+```
 
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+### 2. Update namespace imports
+
+Replace all `Spatie\DataTransferObject` namespace references with `Aryanjaya\DataTransferObject`:
+
+```php
+// Before
+use Spatie\DataTransferObject\DataTransferObject;
+use Spatie\DataTransferObject\Attributes\MapFrom;
+use Spatie\DataTransferObject\Caster;
+
+// After
+use Aryanjaya\DataTransferObject\DataTransferObject;
+use Aryanjaya\DataTransferObject\Attributes\MapFrom;
+use Aryanjaya\DataTransferObject\Caster;
+```
+
+### 3. Run a find-and-replace
+
+You can use your IDE or a simple command to replace all occurrences:
+
+```bash
+# Example using sed (Linux/Mac)
+find src tests -name "*.php" -exec sed -i 's/Spatie\\DataTransferObject/Aryanjaya\\DataTransferObject/g' {} \;
+```
+
+That's it! The API is identical to the original package.
 
 ## Usage
 
 The goal of this package is to make constructing objects from arrays of (serialized) data as easy as possible. Here's what a DTO looks like:
 
 ```php
-use Spatie\DataTransferObject\Attributes\MapFrom;
-use Spatie\DataTransferObject\DataTransferObject;
+use Aryanjaya\DataTransferObject\Attributes\MapFrom;
+use Aryanjaya\DataTransferObject\DataTransferObject;
 
 class MyDTO extends DataTransferObject
 {
@@ -131,7 +158,7 @@ class ComplexObject
 And its caster `ComplexObjectCaster`:
 
 ```php
-use Spatie\DataTransferObject\Caster;
+use Aryanjaya\DataTransferObject\Caster;
 
 class ComplexObjectCaster implements Caster
 {
@@ -187,18 +214,18 @@ abstract class BaseDataTransferObject extends DataTransferObject
 
 ### Using custom caster arguments
 
-Any caster can be passed custom arguments, the built-in [`ArrayCaster` implementation](https://github.com/spatie/data-transfer-object/blob/master/src/Casters/ArrayCaster.php) is a good example of how this may be used.
+Any caster can be passed custom arguments, the built-in [`ArrayCaster` implementation](https://github.com/aryanjaya/data-transfer-object/blob/master/src/Casters/ArrayCaster.php) is a good example of how this may be used.
 
 Using named arguments when passing input to your caster will help make your code more clear, but they are not required.
 
 For example:
 
 ```php
-    /** @var \Spatie\DataTransferObject\Tests\Foo[] */
+    /** @var \Aryanjaya\DataTransferObject\Tests\Foo[] */
     #[CastWith(ArrayCaster::class, itemType: Foo::class)]
     public array $collectionWithNamedArguments;
     
-    /** @var \Spatie\DataTransferObject\Tests\Foo[] */
+    /** @var \Aryanjaya\DataTransferObject\Tests\Foo[] */
     #[CastWith(ArrayCaster::class, Foo::class)]
     public array $collectionWithoutNamedArguments;
 ```
@@ -324,7 +351,7 @@ new NonStrictDto(
 ```
 
 ```php
-use \Spatie\DataTransferObject\Attributes\Strict;
+use \Aryanjaya\DataTransferObject\Attributes\Strict;
 
 #[Strict]
 class StrictDto extends DataTransferObject
@@ -332,7 +359,7 @@ class StrictDto extends DataTransferObject
     public string $name;
 }
 
-// This throws a \Spatie\DataTransferObject\Exceptions\UnknownProperties exception
+// This throws a \Aryanjaya\DataTransferObject\Exceptions\UnknownProperties exception
 new StrictDto(
     name: 'name',
     unknown: 'unknown'
@@ -387,7 +414,7 @@ Here's an example of casting a collection of DTOs to an array of DTOs:
 ```php
 class Bar extends DataTransferObject
 {
-    /** @var \Spatie\DataTransferObject\Tests\Foo[] */
+    /** @var \Aryanjaya\DataTransferObject\Tests\Foo[] */
     #[CastWith(FooArrayCaster::class)]
     public array $collectionOfFoo;
 }
@@ -463,7 +490,7 @@ For a simple array of DTOs, or an object that implements PHP's built-in `ArrayAc
 ```php
 class Bar extends DataTransferObject
 {
-    /** @var \Spatie\DataTransferObject\Tests\Foo[] */
+    /** @var \Aryanjaya\DataTransferObject\Tests\Foo[] */
     #[CastWith(ArrayCaster::class, itemType: Foo::class)]
     public array $collectionOfFoo;
 }
@@ -478,22 +505,6 @@ composer test
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
-
-## Contributing
-
-Please see [CONTRIBUTING](https://github.com/spatie/.github/blob/main/CONTRIBUTING.md) for details.
-
-### Security
-
-If you've found a bug regarding security please mail [security@spatie.be](mailto:security@spatie.be) instead of using the issue tracker.
-
-## Postcardware
-
-You're free to use this package, but if it makes it to your production environment we highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using.
-
-Our address is: Spatie, Kruikstraat 22, 2018 Antwerp, Belgium.
-
-We publish all received postcards [on our company website](https://spatie.be/en/opensource/postcards).
 
 ## External tools
 

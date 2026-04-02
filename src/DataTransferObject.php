@@ -1,14 +1,14 @@
 <?php
 
-namespace Spatie\DataTransferObject;
+namespace Aryanjaya\DataTransferObject;
 
 use ReflectionClass;
 use ReflectionProperty;
-use Spatie\DataTransferObject\Attributes\CastWith;
-use Spatie\DataTransferObject\Attributes\MapTo;
-use Spatie\DataTransferObject\Casters\DataTransferObjectCaster;
-use Spatie\DataTransferObject\Exceptions\UnknownProperties;
-use Spatie\DataTransferObject\Reflection\DataTransferObjectClass;
+use Aryanjaya\DataTransferObject\Attributes\CastWith;
+use Aryanjaya\DataTransferObject\Attributes\MapTo;
+use Aryanjaya\DataTransferObject\Casters\DataTransferObjectCaster;
+use Aryanjaya\DataTransferObject\Exceptions\UnknownProperties;
+use Aryanjaya\DataTransferObject\Reflection\DataTransferObjectClass;
 
 #[CastWith(DataTransferObjectCaster::class)]
 abstract class DataTransferObject

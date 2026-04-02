@@ -1,10 +1,10 @@
 <?php
 
-namespace Spatie\DataTransferObject\Casters;
+namespace Aryanjaya\DataTransferObject\Casters;
 
 use ArrayAccess;
 use LogicException;
-use Spatie\DataTransferObject\Caster;
+use Aryanjaya\DataTransferObject\Caster;
 use Traversable;
 
 class ArrayCaster implements Caster

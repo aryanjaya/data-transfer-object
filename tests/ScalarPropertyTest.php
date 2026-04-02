@@ -1,8 +1,8 @@
 <?php
 
-namespace Spatie\DataTransferObject\Tests;
+namespace Aryanjaya\DataTransferObject\Tests;
 
-use Spatie\DataTransferObject\DataTransferObject;
+use Aryanjaya\DataTransferObject\DataTransferObject;
 
 class ScalarPropertyTest extends TestCase
 {

@@ -1,17 +1,22 @@
 {
-    "name": "spatie/data-transfer-object",
+    "name": "aryanjaya/data-transfer-object",
     "description": "Data transfer objects with batteries included",
     "keywords": [
         "spatie",
         "data-transfer-object"
     ],
-    "homepage": "https://github.com/spatie/data-transfer-object",
+    "homepage": "https://github.com/aryanjaya/data-transfer-object",
     "license": "MIT",
     "authors": [
         {
             "name": "Brent Roose",
             "email": "brent@spatie.be",
             "homepage": "https://spatie.be",
+            "role": "Developer"
+        },
+        {
+            "name": "Aryan Jaya",
+            "email": "aryanjaya@gmail.com",
             "role": "Developer"
         }
     ],
@@ -26,12 +31,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Spatie\\DataTransferObject\\": "src"
+            "Aryanjaya\\DataTransferObject\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Spatie\\DataTransferObject\\Tests\\": "tests"
+            "Aryanjaya\\DataTransferObject\\Tests\\": "tests"
         }
     },
     "scripts": {
