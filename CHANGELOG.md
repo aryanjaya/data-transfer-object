@@ -2,6 +2,23 @@
 
 All notable changes to `data-transfer-object` will be documented in this file
 
+## v3.9.2 - 2026-04-02
+
+Initial release of the fork from `spatie/data-transfer-object`.
+
+### What's Changed
+
+This package is a community-maintained fork of the original [spatie/data-transfer-object](https://github.com/spatie/data-transfer-object) package, which the Spatie team has [decided to deprecate](https://stitcher.io/blog/deprecating-spatie-dto).
+
+### Migration from spatie/data-transfer-object
+
+**No API changes** - this fork maintains 100% compatibility with the original package. To migrate:
+
+```bash
+composer remove spatie/data-transfer-object
+composer require aryanjaya/data-transfer-object
+
+```
 ## 3.9.1 - 2022-09-16
 
 ### What's Changed
