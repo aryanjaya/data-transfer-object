@@ -5,13 +5,13 @@ namespace Aryanjaya\DataTransferObject\Tests;
 use ArrayAccess;
 use ArrayIterator;
 use ArrayObject;
+use Aryanjaya\DataTransferObject\Attributes\CastWith;
+use Aryanjaya\DataTransferObject\Casters\ArrayCaster;
+use Aryanjaya\DataTransferObject\DataTransferObject;
 use Illuminate\Support\Collection;
 use Iterator;
 use IteratorAggregate;
 use LogicException;
-use Aryanjaya\DataTransferObject\Attributes\CastWith;
-use Aryanjaya\DataTransferObject\Casters\ArrayCaster;
-use Aryanjaya\DataTransferObject\DataTransferObject;
 
 class CustomCasterArgumentsTest extends TestCase
 {

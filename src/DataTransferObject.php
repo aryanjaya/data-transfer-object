@@ -2,13 +2,13 @@
 
 namespace Aryanjaya\DataTransferObject;
 
-use ReflectionClass;
-use ReflectionProperty;
 use Aryanjaya\DataTransferObject\Attributes\CastWith;
 use Aryanjaya\DataTransferObject\Attributes\MapTo;
 use Aryanjaya\DataTransferObject\Casters\DataTransferObjectCaster;
 use Aryanjaya\DataTransferObject\Exceptions\UnknownProperties;
 use Aryanjaya\DataTransferObject\Reflection\DataTransferObjectClass;
+use ReflectionClass;
+use ReflectionProperty;
 
 #[CastWith(DataTransferObjectCaster::class)]
 abstract class DataTransferObject

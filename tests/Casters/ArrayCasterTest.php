@@ -2,11 +2,11 @@
 
 namespace Aryanjaya\DataTransferObject\Tests\Casters;
 
-use Exception;
 use Aryanjaya\DataTransferObject\Attributes\CastWith;
 use Aryanjaya\DataTransferObject\Caster;
 use Aryanjaya\DataTransferObject\DataTransferObject;
 use Aryanjaya\DataTransferObject\Tests\TestCase;
+use Exception;
 
 class ArrayCasterTest extends TestCase
 {

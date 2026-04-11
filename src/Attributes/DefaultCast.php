@@ -2,12 +2,12 @@
 
 namespace Aryanjaya\DataTransferObject\Attributes;
 
+use Aryanjaya\DataTransferObject\Caster;
 use Attribute;
 use JetBrains\PhpStorm\Immutable;
 use ReflectionNamedType;
 use ReflectionProperty;
 use ReflectionUnionType;
-use Aryanjaya\DataTransferObject\Caster;
 
 #[Attribute(Attribute::TARGET_CLASS | Attribute::IS_REPEATABLE)]
 class DefaultCast

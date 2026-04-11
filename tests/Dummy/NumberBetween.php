@@ -2,9 +2,9 @@
 
 namespace Aryanjaya\DataTransferObject\Tests\Dummy;
 
-use Attribute;
 use Aryanjaya\DataTransferObject\Validation\ValidationResult;
 use Aryanjaya\DataTransferObject\Validator;
+use Attribute;
 
 #[Attribute(Attribute::TARGET_PROPERTY | Attribute::IS_REPEATABLE)]
 class NumberBetween implements Validator

@@ -2,6 +2,12 @@
 
 namespace Aryanjaya\DataTransferObject\Reflection;
 
+use Aryanjaya\DataTransferObject\Attributes\CastWith;
+use Aryanjaya\DataTransferObject\Attributes\DefaultCast;
+use Aryanjaya\DataTransferObject\Attributes\MapFrom;
+use Aryanjaya\DataTransferObject\Caster;
+use Aryanjaya\DataTransferObject\DataTransferObject;
+use Aryanjaya\DataTransferObject\Validator;
 use JetBrains\PhpStorm\Immutable;
 use ReflectionAttribute;
 use ReflectionClass;
@@ -9,12 +15,6 @@ use ReflectionNamedType;
 use ReflectionProperty;
 use ReflectionType;
 use ReflectionUnionType;
-use Aryanjaya\DataTransferObject\Attributes\CastWith;
-use Aryanjaya\DataTransferObject\Attributes\DefaultCast;
-use Aryanjaya\DataTransferObject\Attributes\MapFrom;
-use Aryanjaya\DataTransferObject\Caster;
-use Aryanjaya\DataTransferObject\DataTransferObject;
-use Aryanjaya\DataTransferObject\Validator;
 
 class DataTransferObjectProperty
 {

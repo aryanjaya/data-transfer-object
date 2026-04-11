@@ -2,8 +2,8 @@
 
 namespace Aryanjaya\DataTransferObject\Casters;
 
-use LogicException;
 use Aryanjaya\DataTransferObject\Caster;
+use LogicException;
 
 class EnumCaster implements Caster
 {
