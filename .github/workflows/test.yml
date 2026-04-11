@@ -40,7 +40,7 @@ jobs:
           with:
             php-version: ${{ matrix.php }}
             extensions: mbstring, sqlite, pdo_sqlite, iconv
-            coverage: none
+            coverage: pcov
 
       -   name: Setup problem matchers
           run: |
