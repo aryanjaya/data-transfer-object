@@ -2,6 +2,22 @@
 
 All notable changes to `data-transfer-object` will be documented in this file
 
+## v3.10.0 - 2026-04-11
+
+### What's Changed
+
+* feat: add support for Laravel 10 and PHP 8.1+ by @aryanjaya in https://github.com/aryanjaya/data-transfer-object/pull/2
+* **BREAKING**: Minimum PHP version bumped from `^8.0` to `^8.1`
+
+### Migration
+
+If you're on PHP 8.0, stay on v3.9.3. To upgrade:
+
+* Upgrade to PHP 8.1+
+* Run `composer update`
+
+**Full Changelog**: https://github.com/aryanjaya/data-transfer-object/compare/v3.9.3...v3.10.0
+
 ## v3.9.3 - 2026-04-11
 
 ### What's Changed
@@ -29,6 +45,7 @@ This package is a community-maintained fork of the original [spatie/data-transfe
 ```bash
 composer remove spatie/data-transfer-object
 composer require aryanjaya/data-transfer-object
+
 
 
 ```
