@@ -2,6 +2,18 @@
 
 All notable changes to `data-transfer-object` will be documented in this file
 
+## v3.9.3 - 2026-04-11
+
+### What's Changed
+
+* Add Laravel 9 compatibility by @aryanjaya in https://github.com/aryanjaya/data-transfer-object/pull/1
+
+### New Contributors
+
+* @aryanjaya made their first contribution in https://github.com/aryanjaya/data-transfer-object/pull/1
+
+**Full Changelog**: https://github.com/aryanjaya/data-transfer-object/compare/v3.9.2...v3.9.3
+
 ## v3.9.2 - 2026-04-02
 
 Initial release of the fork from `spatie/data-transfer-object`.
@@ -17,6 +29,7 @@ This package is a community-maintained fork of the original [spatie/data-transfe
 ```bash
 composer remove spatie/data-transfer-object
 composer require aryanjaya/data-transfer-object
+
 
 ```
 ## 3.9.1 - 2022-09-16
