@@ -3,8 +3,8 @@
 namespace Aryanjaya\DataTransferObject\Casters;
 
 use ArrayAccess;
-use LogicException;
 use Aryanjaya\DataTransferObject\Caster;
+use LogicException;
 use Traversable;
 
 class ArrayCaster implements Caster

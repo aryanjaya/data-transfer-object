@@ -2,9 +2,9 @@
 
 namespace Aryanjaya\DataTransferObject\Attributes;
 
-use Attribute;
 use Aryanjaya\DataTransferObject\Caster;
 use Aryanjaya\DataTransferObject\Exceptions\InvalidCasterClass;
+use Attribute;
 
 #[Attribute(Attribute::TARGET_CLASS | Attribute::TARGET_PROPERTY)]
 class CastWith

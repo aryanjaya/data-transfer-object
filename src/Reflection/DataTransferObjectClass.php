@@ -2,11 +2,11 @@
 
 namespace Aryanjaya\DataTransferObject\Reflection;
 
-use ReflectionClass;
-use ReflectionProperty;
 use Aryanjaya\DataTransferObject\Attributes\Strict;
 use Aryanjaya\DataTransferObject\DataTransferObject;
 use Aryanjaya\DataTransferObject\Exceptions\ValidationException;
+use ReflectionClass;
+use ReflectionProperty;
 
 class DataTransferObjectClass
 {

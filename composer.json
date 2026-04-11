@@ -24,7 +24,7 @@
         "php": "^8.0"
     },
     "require-dev": {
-        "illuminate/collections": "^8.36",
+        "illuminate/collections": "^8.36|^9.0",
         "larapack/dd": "^1.1",
         "phpunit/phpunit": "^9.5.5",
         "jetbrains/phpstorm-attributes": "^1.0"

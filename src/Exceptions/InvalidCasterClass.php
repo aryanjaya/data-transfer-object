@@ -2,8 +2,8 @@
 
 namespace Aryanjaya\DataTransferObject\Exceptions;
 
-use Exception;
 use Aryanjaya\DataTransferObject\Caster;
+use Exception;
 
 class InvalidCasterClass extends Exception
 {

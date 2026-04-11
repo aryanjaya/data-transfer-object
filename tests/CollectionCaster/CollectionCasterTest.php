@@ -2,11 +2,11 @@
 
 namespace Aryanjaya\DataTransferObject\Tests\CollectionCaster;
 
-use Illuminate\Support\Collection;
 use Aryanjaya\DataTransferObject\Attributes\CastWith;
 use Aryanjaya\DataTransferObject\Caster;
 use Aryanjaya\DataTransferObject\DataTransferObject;
 use Aryanjaya\DataTransferObject\Tests\TestCase;
+use Illuminate\Support\Collection;
 
 class CollectionCasterTest extends TestCase
 {

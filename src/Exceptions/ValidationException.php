@@ -2,8 +2,8 @@
 
 namespace Aryanjaya\DataTransferObject\Exceptions;
 
-use Exception;
 use Aryanjaya\DataTransferObject\DataTransferObject;
+use Exception;
 
 class ValidationException extends Exception
 {

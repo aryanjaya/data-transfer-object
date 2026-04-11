@@ -2,7 +2,6 @@
 
 namespace Aryanjaya\DataTransferObject\Tests\Casters;
 
-use LogicException;
 use Aryanjaya\DataTransferObject\Attributes\CastWith;
 use Aryanjaya\DataTransferObject\Casters\EnumCaster;
 use Aryanjaya\DataTransferObject\DataTransferObject;
@@ -10,6 +9,7 @@ use Aryanjaya\DataTransferObject\Tests\Stubs\IntegerEnum;
 use Aryanjaya\DataTransferObject\Tests\Stubs\SimpleEnum;
 use Aryanjaya\DataTransferObject\Tests\Stubs\StringEnum;
 use Aryanjaya\DataTransferObject\Tests\TestCase;
+use LogicException;
 
 /** @requires PHP >= 8.1 */
 class EnumCasterTest extends TestCase

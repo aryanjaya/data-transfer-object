@@ -2,11 +2,11 @@
 
 namespace Aryanjaya\DataTransferObject\Tests;
 
-use Attribute;
-use DateTimeImmutable;
 use Aryanjaya\DataTransferObject\Attributes\DefaultCast;
 use Aryanjaya\DataTransferObject\Caster;
 use Aryanjaya\DataTransferObject\DataTransferObject;
+use Attribute;
+use DateTimeImmutable;
 
 class DefaultCasterTest extends TestCase
 {
